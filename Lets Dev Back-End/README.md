@@ -1,0 +1,5 @@
+- Node
+- Express
+- Prisma
+- Typescript
+- Postgres
