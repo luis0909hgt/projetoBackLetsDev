@@ -9,3 +9,19 @@ datasource db {
   provider = "sqlite"
   url      = "file:./database.sqlite"
 }
+
+model User {
+  id String @id @default(uuid())
+
+  name     String
+  email    String @unique
+  password String
+
+  birthDate  DateTime?
+  cellNumber Int?      @unique
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("user")
+}
